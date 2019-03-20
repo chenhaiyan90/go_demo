@@ -1,4 +1,4 @@
-package base
+package main
 
 import "fmt"
 
@@ -10,11 +10,11 @@ func (r *rect) area() int {
 	return r.width * r.height
 }
 
-func (r *rect)set(height int)  {
-	r.height=height
+func (r *rect) set(height int) {
+	r.height = height
 }
-func (r rect)set2(height int)  {
-	r.height=height
+func (r rect) set2(height int) {
+	r.height = height
 }
 func (r rect) perim() int {
 	return 2*r.width + 2*r.height

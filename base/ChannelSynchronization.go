@@ -1,4 +1,4 @@
-package base
+package main
 
 import "fmt"
 import "time"
@@ -20,6 +20,6 @@ func main() {
 	go worker(done)
 	//Block until we receive a notification from the worker on the channel.
 
-	a:=<-done
-	fmt.Println("main end!!!",a)
+	a := <-done
+	fmt.Println("main end!!!", a)
 }

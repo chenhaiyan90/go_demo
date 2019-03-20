@@ -1,6 +1,7 @@
-package base
+package main
 
 import "fmt"
+
 //In this example we’ll use a jobs channel to communicate work to be done from the main() goroutine to a worker goroutine. When we have no more jobs for the worker we’ll close the jobs channel.
 
 func main() {
@@ -12,7 +13,7 @@ func main() {
 		for {
 			j, more := <-jobs
 			if more {
-				fmt.Println("received job", j,more)
+				fmt.Println("received job", j, more)
 			} else {
 				fmt.Println("received all jobs")
 				done <- true

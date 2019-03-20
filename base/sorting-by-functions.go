@@ -1,4 +1,4 @@
-package base
+package main
 
 import "sort"
 import "fmt"

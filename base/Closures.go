@@ -1,10 +1,10 @@
-package base
+package main
 
 import "fmt"
 
 func intSeq() func() int {
 	i := 0
-	fmt.Println("aaa",i)
+	fmt.Println("aaa", i)
 	return func() int {
 		i++
 		return i

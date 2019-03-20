@@ -1,4 +1,5 @@
-package base
+package main
+
 import (
 	"fmt"
 	"sort"
@@ -6,8 +7,8 @@ import (
 
 //学生成绩结构体
 type StuScore struct {
-	name  string    //姓名
-	score int   //成绩
+	name  string //姓名
+	score int    //成绩
 }
 
 type StuScores []StuScore
@@ -36,11 +37,11 @@ func main() {
 	}
 
 	//打印未排序的stus数据
-	fmt.Println("Default:\n\t",stus)
+	fmt.Println("Default:\n\t", stus)
 	//StuScores已经实现了sort.Interface接口,所以可以调用Sort函数进行排序
 	sort.Sort(stus)
 	//判断是否已经排好顺序，将会打印true
 	fmt.Println("IS Sorted?\n\t", sort.IsSorted(stus))
 	//打印排序后的stus数据>>>>
-	fmt.Println("Sorted:\n\t",stus)
+	fmt.Println("Sorted:\n\t", stus)
 }
